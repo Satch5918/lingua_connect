@@ -1,9 +1,13 @@
 // src/pages/_app.tsx
-
-import '../styles/globals.css'; // Importa los estilos globales
+import { AuthProvider } from '../context/authContext';
+import '../styles/globals.css'; // Tu hoja de estilos globales
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <AuthProvider>
+      <Component {...pageProps} />
+    </AuthProvider>
+  );
 }
 
 export default MyApp;
