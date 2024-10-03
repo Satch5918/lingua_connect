@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    --bg-light: white;
+    --bg-dark: #1a202c; /* gris oscuro */
+    --text-light: black;
+    --text-dark: white;
+  }
+  
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+  
+  .dark body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
